@@ -9,7 +9,7 @@
       "source_file": "include/ring_buffer.h",
       "source_location": "L1",
       "id": "include_ring_buffer_h",
-      "community": 0,
+      "community": 1,
       "norm_label": "ring_buffer.h"
     },
     {
@@ -36,16 +36,16 @@
       "source_file": "include/ring_buffer.h",
       "source_location": "L38",
       "id": "ring_buffer_ring_dequeue",
-      "community": 0,
+      "community": 1,
       "norm_label": "ring_dequeue()"
     },
     {
       "label": "main.c",
       "file_type": "code",
-      "source_file": "src/main.c",
+      "source_file": "dpdk_port/main.c",
       "source_location": "L1",
-      "id": "src_main_c",
-      "community": 1,
+      "id": "dpdk_port_main_c",
+      "community": 0,
       "norm_label": "main.c"
     },
     {
@@ -54,8 +54,17 @@
       "source_file": "src/main.c",
       "source_location": "L7",
       "id": "main_main",
-      "community": 1,
+      "community": 0,
       "norm_label": "main()"
+    },
+    {
+      "label": "main.c",
+      "file_type": "code",
+      "source_file": "src/main.c",
+      "source_location": "L1",
+      "id": "src_main_c",
+      "community": 0,
+      "norm_label": "main.c"
     }
   ],
   "links": [
@@ -102,8 +111,8 @@
       "source_file": "src/main.c",
       "source_location": "L13",
       "weight": 1.0,
-      "_src": "main_main",
-      "_tgt": "ring_buffer_ring_init",
+      "_src": "ring_buffer_ring_init",
+      "_tgt": "main_main",
       "source": "ring_buffer_ring_init",
       "target": "main_main"
     },
@@ -114,8 +123,8 @@
       "source_file": "src/main.c",
       "source_location": "L17",
       "weight": 1.0,
-      "_src": "main_main",
-      "_tgt": "ring_buffer_ring_enqueue",
+      "_src": "ring_buffer_ring_enqueue",
+      "_tgt": "main_main",
       "source": "ring_buffer_ring_enqueue",
       "target": "main_main"
     },
@@ -126,10 +135,22 @@
       "source_file": "src/main.c",
       "source_location": "L22",
       "weight": 1.0,
-      "_src": "main_main",
-      "_tgt": "ring_buffer_ring_dequeue",
+      "_src": "ring_buffer_ring_dequeue",
+      "_tgt": "main_main",
       "source": "ring_buffer_ring_dequeue",
       "target": "main_main"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "dpdk_port/main.c",
+      "source_location": "L8",
+      "weight": 1.0,
+      "_src": "dpdk_port_main_c",
+      "_tgt": "main_main",
+      "source": "dpdk_port_main_c",
+      "target": "main_main",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -139,8 +160,8 @@
       "weight": 1.0,
       "_src": "src_main_c",
       "_tgt": "main_main",
-      "source": "src_main_c",
-      "target": "main_main",
+      "source": "main_main",
+      "target": "src_main_c",
       "confidence_score": 1.0
     }
   ],

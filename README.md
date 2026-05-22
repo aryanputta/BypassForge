@@ -23,3 +23,8 @@ make
 make test
 ```
 
+## Real DPDK Path
+
+This repo now includes a `dpdk_port/` path with a starter `main.c` and build metadata so the next step is to move from the bounded ring model to real packet RX/TX bursts on a DPDK-capable system.
+
+On this machine there is no DPDK environment, so the port is scaffolded but not executable here.
