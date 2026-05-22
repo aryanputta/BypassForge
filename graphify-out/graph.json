@@ -1,0 +1,148 @@
+{
+  "directed": false,
+  "multigraph": false,
+  "graph": {},
+  "nodes": [
+    {
+      "label": "ring_buffer.h",
+      "file_type": "code",
+      "source_file": "include/ring_buffer.h",
+      "source_location": "L1",
+      "id": "include_ring_buffer_h",
+      "community": 0,
+      "norm_label": "ring_buffer.h"
+    },
+    {
+      "label": "ring_init()",
+      "file_type": "code",
+      "source_file": "include/ring_buffer.h",
+      "source_location": "L22",
+      "id": "ring_buffer_ring_init",
+      "community": 1,
+      "norm_label": "ring_init()"
+    },
+    {
+      "label": "ring_enqueue()",
+      "file_type": "code",
+      "source_file": "include/ring_buffer.h",
+      "source_location": "L28",
+      "id": "ring_buffer_ring_enqueue",
+      "community": 0,
+      "norm_label": "ring_enqueue()"
+    },
+    {
+      "label": "ring_dequeue()",
+      "file_type": "code",
+      "source_file": "include/ring_buffer.h",
+      "source_location": "L38",
+      "id": "ring_buffer_ring_dequeue",
+      "community": 0,
+      "norm_label": "ring_dequeue()"
+    },
+    {
+      "label": "main.c",
+      "file_type": "code",
+      "source_file": "src/main.c",
+      "source_location": "L1",
+      "id": "src_main_c",
+      "community": 1,
+      "norm_label": "main.c"
+    },
+    {
+      "label": "main()",
+      "file_type": "code",
+      "source_file": "src/main.c",
+      "source_location": "L7",
+      "id": "main_main",
+      "community": 1,
+      "norm_label": "main()"
+    }
+  ],
+  "links": [
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "include/ring_buffer.h",
+      "source_location": "L22",
+      "weight": 1.0,
+      "_src": "include_ring_buffer_h",
+      "_tgt": "ring_buffer_ring_init",
+      "source": "include_ring_buffer_h",
+      "target": "ring_buffer_ring_init",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "include/ring_buffer.h",
+      "source_location": "L28",
+      "weight": 1.0,
+      "_src": "include_ring_buffer_h",
+      "_tgt": "ring_buffer_ring_enqueue",
+      "source": "include_ring_buffer_h",
+      "target": "ring_buffer_ring_enqueue",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "include/ring_buffer.h",
+      "source_location": "L38",
+      "weight": 1.0,
+      "_src": "include_ring_buffer_h",
+      "_tgt": "ring_buffer_ring_dequeue",
+      "source": "include_ring_buffer_h",
+      "target": "ring_buffer_ring_dequeue",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "src/main.c",
+      "source_location": "L13",
+      "weight": 1.0,
+      "_src": "main_main",
+      "_tgt": "ring_buffer_ring_init",
+      "source": "ring_buffer_ring_init",
+      "target": "main_main"
+    },
+    {
+      "relation": "calls",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "src/main.c",
+      "source_location": "L17",
+      "weight": 1.0,
+      "_src": "main_main",
+      "_tgt": "ring_buffer_ring_enqueue",
+      "source": "ring_buffer_ring_enqueue",
+      "target": "main_main"
+    },
+    {
+      "relation": "calls",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "src/main.c",
+      "source_location": "L22",
+      "weight": 1.0,
+      "_src": "main_main",
+      "_tgt": "ring_buffer_ring_dequeue",
+      "source": "ring_buffer_ring_dequeue",
+      "target": "main_main"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main.c",
+      "source_location": "L7",
+      "weight": 1.0,
+      "_src": "src_main_c",
+      "_tgt": "main_main",
+      "source": "src_main_c",
+      "target": "main_main",
+      "confidence_score": 1.0
+    }
+  ],
+  "hyperedges": []
+}
